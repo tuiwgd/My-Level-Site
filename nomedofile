@@ -1,1 +1,72 @@
-index.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>CCL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f14;
+      color: #fff;
+      display: flex;
+    }
+    .sidebar {
+      width: 220px;
+      background: #151520;
+      padding: 10px;
+      overflow-y: auto;
+      height: 100vh;
+    }
+    .sidebar div {
+      padding: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .sidebar div:hover {
+      background: #2a2a3d;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+    .card {
+      background: #1b1b2b;
+      border-radius: 10px;
+      padding: 15px;
+      max-width: 500px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div onclick="showLevel('Auditory fixer')">Auditory fixer</div>
+  <div onclick="showLevel('Final Flight')">Final Flight</div>
+  <div onclick="showLevel('Fried Egg')">Fried Egg</div>
+</div>
+
+<div class="content">
+  <div class="card" id="level">
+    <h2>Auditory fixer</h2>
+    <p><b>Creator:</b> JoinMolten</p>
+    <p><b>FPS:</b> 120</p>
+    <p><b>Version:</b> 2.1</p>
+  </div>
+</div>
+
+<script>
+function showLevel(name) {
+  document.getElementById("level").innerHTML = `
+    <h2>${name}</h2>
+    <p><b>Creator:</b> Unknown</p>
+    <p><b>FPS:</b> 120</p>
+    <p><b>Version:</b> 2.1</p>
+  `;
+}
+</script>
+
+</body>
+</html>
+
